@@ -18,5 +18,6 @@ packet_t* instantiate_packet(void);
 void destroy_packet(packet_t*p);
 void cal_time_start(packet_t *p);
 void cal_time_end(packet_t *p);
+void initial_packet_pool(long long packet_pool_size);
 
 #endif

@@ -14,7 +14,9 @@ typedef struct node{
 
 node* create_node(Func fp);
 void create_pipe(node* a,node *b);
+void create_pipe_with_length(node* a,node *b,int len);
 int node_read(int sockfd,char* buf,int len);
 int node_write(int sockfd,char* buf,int len);
+int node_write_return_immediately(int sockfd,char* buf,int len);
 
 #endif

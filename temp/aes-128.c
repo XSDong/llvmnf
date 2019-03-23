@@ -3,6 +3,7 @@
 #include <ctype.h>
 #include <string.h>
 //#include "aes-128.h"
+#include "coroutine.h"
 
 //void aes(char*, char*, char*, int);
 int aes(char* source_path, char* des_path, int len,int method);
@@ -169,6 +170,7 @@ int aes(char* source_path, char* des_path, int len,int method){
     //将文件转换成16字节的int型数组加密、解密
     for (int i = 0; i < size / 16; ++i) {
 
+	//if(i == size/32)yield_return();
         int content_to_int[4][4];
         for (int j = 0; j < 4; ++j) {
             for (int k = 0; k < 4; ++k) {

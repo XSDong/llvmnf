@@ -6,8 +6,15 @@ typedef struct thread_local_t{
 	ucontext_t uct;
 }thread_local_t;
 
+void router_test();
 void test();
 void test_half_aes();
 void produced_test();
+void ac_test();
+void platform_test();
+
+void total_for();
+void half_return_for();
+void half_for();
 
 #endif
